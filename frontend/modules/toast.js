@@ -11,12 +11,12 @@ export const primary = "rgb(13, 110, 253)"   //blue
 
 // we use this for giving instruction to user when any event occur(like registration successful , failed, etc).
 
-export const shToast = (text, bgColor, color = "white", destination = "null", duration = 3000) => {
+export const shToast = (text, bgColor, color = "white", duration = 3000) => {
 
     Toastify({
         text: `${text}`,
         duration: `${duration}`,
-        destination: `${destination}`,
+        // destination: `${destination}`,
         // newWindow: true,
         close: true,
         gravity: "bottom", // `top` or `bottom`

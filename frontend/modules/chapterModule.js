@@ -130,7 +130,7 @@ export function loadChapterContent(
 		});
 	} else {
 		notesContent.innerHTML = "<p style='color: red; font-size: 16px; font-weight: bold; margin: 10px 20px;'>Please log in to access notes.</p>"
-		shToast("log in to access practice questions and notes.", info, "black")
+		shToast("log in to access practice questions and notes.", info, "black", 0)
 	}
 
 	// Load articles
