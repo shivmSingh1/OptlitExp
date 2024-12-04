@@ -6,6 +6,7 @@ signInBtn.addEventListener("click", () => {
 
 // ------------------------------------------------
 import { danger, shToast, success } from "../modules/toast";
+console.log("gotin signup.js")
 
 import.meta.env.VITE_API_BASE_URL;
 const form = document.getElementById('signupForm');
