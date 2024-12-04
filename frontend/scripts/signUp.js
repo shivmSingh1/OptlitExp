@@ -34,7 +34,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Send data to the server
-        const response = await fetch(`${process.env.API_BASE_URL}/signup`, {
+        const response = await fetch(`https://optlit.onrender.com/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

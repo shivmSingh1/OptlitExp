@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", async (e) => {
 			localStorage.setItem("userName", result.name);
 
 			loginForm.reset(); // Clear form fields
-			window.location.href = "http://localhost:5173/index.html?toast=login-success";
+			window.location.href = "https://optlit.vercel.app/index.html?toast=login-success";
 		} else {
 			const errorText = await response.text();
 			shToast(errorText, danger)
