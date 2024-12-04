@@ -3,6 +3,8 @@
 import { danger, shToast, success } from "../modules/toast";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;;
+console.log('BASE_URL:', BASE_URL); // Debugging ke liye
+
 const loginForm = document.querySelector("#login-form");
 
 loginForm.addEventListener("submit", async (e) => {
@@ -19,7 +21,7 @@ loginForm.addEventListener("submit", async (e) => {
 
 	try {
 
-		const response = await fetch(`${BASE_URL}/login`, {
+		const response = await fetch(`https://optlit.onrender.com/login`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
