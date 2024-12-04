@@ -7,8 +7,8 @@ const dbUrl = process.env.ATLAS_URL;
 
 const connectDB = async () => {
 	try {
-		// await mongoose.connect("mongodb://127.0.0.1:27017/optlit")
-		await mongoose.connect(dbUrl);
+		await mongoose.connect("mongodb+srv://shivams7380:shivamongo@cluster0.3oiwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+		// await mongoose.connect(dbUrl);
 		console.log("connected to db")
 	} catch (error) {
 		console.log(`connection faild ${error}`)

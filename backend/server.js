@@ -6,6 +6,7 @@ import cors from "cors";
 const app = express();
 
 //connecting database
+console.log("got in server.js")
 
 connectDB();
 
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/signup", async (req, res) => {
+	console.log("gotin signup api")
 	try {
 		const { username, email, password } = req.body;
 
