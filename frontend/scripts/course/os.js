@@ -1,10 +1,10 @@
-import { handleTabSwitching, renderChapters, setChapterLinkListeners } from "/minorProject/modules/chapterModule.js";
+import { handleTabSwitching, renderChapters, setChapterLinkListeners } from "../../modules/chapterModule";
 
 // Define arrays for each chapter's content type
 const chapters = [
     {
         title: "Chapter 1: Introduction to Operating System",
-        
+
         content: `<br><p> <b><h5>1. Introduction to Operating Systems</h5></b></p>
 
 <p>An Operating System (OS) is a software that manages computer hardware and software resources and provides services for computer programs. It acts as an intermediary between users and the hardware of a computer, enabling programs to run efficiently and securely.</p>
@@ -65,11 +65,11 @@ const chapters = [
 <p><br></p>
 <p></p>
 <p><br></p>`,
-       
+
     },
     {
         title: "Chapter 2: Process Management",
-        content:`<!DOCTYPE html>
+        content: `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -193,7 +193,7 @@ const chapters = [
 </body>
 </html>
 `,
-        
+
     },
     {
         title: "Chapter 3: Memory Management ",
@@ -247,7 +247,7 @@ const chapters = [
 </body>
 </html>
 `,
-      
+
     },
     {
         title: "Chapter 4: File System",
@@ -304,7 +304,7 @@ const chapters = [
 
 </body>
 </html>`,
-        
+
     },
     {
         title: "Chapter 5:Input/Output Management ",
@@ -332,7 +332,7 @@ const chapters = [
     <p><strong>DMA</strong> allows certain hardware devices (like hard drives or sound cards) to directly transfer data to and from the computer's memory, without involving the CPU. This frees up the CPU to do other tasks while data is being transferred, improving system performance, especially for large data transfers.</p>
 </body>
 </html>`,
-    
+
     },
     {
         title: "Chapter 6: Security and Protection",
@@ -374,14 +374,14 @@ const chapters = [
 </body>
 </html>
 `,
-        
+
     },
     // {
     //     title: "chapter 7:",
     //     content: "",
-        
+
     // },
-  
+
 ];
 
 
@@ -391,7 +391,7 @@ const practiceQuestions = [
         chapterIndex: 0,
         questions: [
             {
-                question:"1.What is the role of an Operating System (OS)? ",
+                question: "1.What is the role of an Operating System (OS)? ",
                 solution: `Answer: The OS manages computer hardware and software resources, providing services for computer programs. It acts as an intermediary between users and the hardware, enabling programs to run efficiently and securely.
 `
             },
@@ -401,23 +401,23 @@ const practiceQuestions = [
 `
             },
             {
-                question:"3. What is the difference between a Batch OS and a TimeSharing OS?",
+                question: "3. What is the difference between a Batch OS and a TimeSharing OS?",
                 solution: `Answer: A Batch OS processes jobs in groups without user interaction, while a TimeSharing OS allows multiple users to share resources simultaneously by switching between tasks quickly, giving the illusion of simultaneous execution.`
             },
             {
-                question:"4. What tasks does the Kernel handle in an Operating System? ",
+                question: "4. What tasks does the Kernel handle in an Operating System? ",
                 solution: `Answer: The Kernel is the core part of the OS and handles tasks such as process management, memory management, and device handling. It interacts directly with hardware and ensures system resources are efficiently managed.`
             },
             {
-                question:"5. What is a system call, and why is it important? ",
+                question: "5. What is a system call, and why is it important? ",
                 solution: `Answer: A system call is a mechanism that allows a program to request services from the OS. It serves as an interface between user space and the kernel, enabling programs to perform tasks like opening files, reading or writing data, and creating processes.`
             },
             {
-                question:"6. What is the purpose of User space in an Operating System?",
+                question: "6. What is the purpose of User space in an Operating System?",
                 solution: `Answer: User space is where user applications and programs run. It has restricted access to system resources to ensure security and stability, preventing unauthorized or harmful interactions with the hardware.`
             },
             {
-                question:"7. What are some examples of real-time operating systems (RTOS) and where are they used?",
+                question: "7. What are some examples of real-time operating systems (RTOS) and where are they used?",
                 solution: `Answer: Examples of real-time operating systems include RTOS and VxWorks. They are typically used in systems with strict time constraints, such as embedded systems and robotics, where immediate processing and responses are critical.
 `
             },
@@ -432,7 +432,7 @@ const practiceQuestions = [
             },
             {
                 question: "2. What are the components of a process? ",
-                solution:  `Answer: The components of a process include the program code, data, stack, heap, and the Process Control Block (PCB). `
+                solution: `Answer: The components of a process include the program code, data, stack, heap, and the Process Control Block (PCB). `
             },
             {
                 question: "3. What is the difference between a process and a thread? ",
@@ -612,7 +612,7 @@ const practiceQuestions = [
         ]
     },
     {
-        chapterIndex: 4, 
+        chapterIndex: 4,
         questions: [
             {
                 question: " 1. What are I/O devices? ",
@@ -658,7 +658,7 @@ Answer: No, with DMA, devices can transfer data to memory directly without invol
         ]
     },
     {
-        chapterIndex: 5, 
+        chapterIndex: 5,
         questions: [
             {
                 question: " 1. What is access control?",
@@ -724,99 +724,99 @@ const notes = [
             "OS: Software that controls hardware and resources.",
             " Examples: Windows, Linux, macOS, Android.",
             "Batch OS: Processes jobs in batches, no user interaction. Example: Early mainframes.",
-             "TimeSharing OS: Allows multiple users to share resources. Example: UNIX, Linux..",
-             " Distributed OS: Manages multiple computers as one system. Example: Android, Hadoop.",
-             " RealTime OS: Handles time-sensitive tasks. Example: RTOS, VxWorks.",
-             " OS Services: Manage memory, files, processes, and I/O.",
-             "System Calls: User requests for OS services (e.g., open(), read(), write(), fork()). ",
-             "Kernel: Manages hardware and system resources. ",
-             "User Space: Where programs run with limited hardware access, interacting with the kernel. ",        
+            "TimeSharing OS: Allows multiple users to share resources. Example: UNIX, Linux..",
+            " Distributed OS: Manages multiple computers as one system. Example: Android, Hadoop.",
+            " RealTime OS: Handles time-sensitive tasks. Example: RTOS, VxWorks.",
+            " OS Services: Manage memory, files, processes, and I/O.",
+            "System Calls: User requests for OS services (e.g., open(), read(), write(), fork()). ",
+            "Kernel: Manages hardware and system resources. ",
+            "User Space: Where programs run with limited hardware access, interacting with the kernel. ",
 
         ]
     },
     {
         chapterIndex: 1,
         notes: [
-           " Process: A program in execution with its code, data, stack, and heap. ",
-           " Thread: Smallest unit of execution within a process; shares address space but has separate execution paths. ",
-           " FCFS: Processes are scheduled in arrival order. ",
-           " SJF: Shortest execution time first.",
-           " Round Robin: Fixed time slices for each process. ",
-           " Priority Scheduling: Processes scheduled by priority. ",
-           " Context Switching: Saves the state of a running process and loads the next process.",
-           " Interprocess Communication (IPC): Mechanisms like pipes, message queues, shared memory, semaphores, and sockets for process communication.",
-           " Deadlock: Processes are stuck waiting for each other.",
-           " Prevented by ensuring one of Coffman’s conditions is not met (e.g., no circular wait). ",
-           
+            " Process: A program in execution with its code, data, stack, and heap. ",
+            " Thread: Smallest unit of execution within a process; shares address space but has separate execution paths. ",
+            " FCFS: Processes are scheduled in arrival order. ",
+            " SJF: Shortest execution time first.",
+            " Round Robin: Fixed time slices for each process. ",
+            " Priority Scheduling: Processes scheduled by priority. ",
+            " Context Switching: Saves the state of a running process and loads the next process.",
+            " Interprocess Communication (IPC): Mechanisms like pipes, message queues, shared memory, semaphores, and sockets for process communication.",
+            " Deadlock: Processes are stuck waiting for each other.",
+            " Prevented by ensuring one of Coffman’s conditions is not met (e.g., no circular wait). ",
+
         ]
     },
     {
         chapterIndex: 2,
         notes: [
-          " Contiguous Memory Allocation allocates a single continuous block of memory to a process.",
-          " Non-Contiguous Memory Allocation splits a process into smaller chunks that can be stored in different places in memory. ",
-          " Contiguous memory allocation can cause fragmentation, where free memory is scattered and cannot be used effectively. ",
-          " Non-Contiguous memory allocation helps avoid fragmentation and is commonly used in paging and segmentation.",
-          " Paging divides both physical memory and the process into fixed-size blocks called pages. ",
-          " Page Table is a structure that keeps track of the locations of each page in memory. ",
-          " Segmentation divides a process into logical units (such as code, data, and stack), where each segment can have a different size. ",
-          " Segmentation provides more flexibility in memory allocation and reflects the logical structure of the program. ",
-          " Virtual Memory allows programs to use more memory than physical RAM by utilizing both RAM and disk space. ",
-          " When physical memory is full, parts of a program are moved to swap space (on disk) to free up RAM. ",
-          " FIFO (First-In-First-Out) replaces the oldest page in memory when a new page needs to be loaded. ",
-          " LRU (Least Recently Used) replaces the page that has not been used for the longest time, keeping frequently used pages in memory.",
-          " The Optimal page replacement algorithm replaces the page that will not be used for the longest time in the future, though it's impractical. ",
-          " Swapping moves a whole process from RAM to disk when memory is full, and brings it back to RAM when needed. ",
-          " Excessive swapping can slow down the system because accessing the disk is slower than accessing RAM.",
+            " Contiguous Memory Allocation allocates a single continuous block of memory to a process.",
+            " Non-Contiguous Memory Allocation splits a process into smaller chunks that can be stored in different places in memory. ",
+            " Contiguous memory allocation can cause fragmentation, where free memory is scattered and cannot be used effectively. ",
+            " Non-Contiguous memory allocation helps avoid fragmentation and is commonly used in paging and segmentation.",
+            " Paging divides both physical memory and the process into fixed-size blocks called pages. ",
+            " Page Table is a structure that keeps track of the locations of each page in memory. ",
+            " Segmentation divides a process into logical units (such as code, data, and stack), where each segment can have a different size. ",
+            " Segmentation provides more flexibility in memory allocation and reflects the logical structure of the program. ",
+            " Virtual Memory allows programs to use more memory than physical RAM by utilizing both RAM and disk space. ",
+            " When physical memory is full, parts of a program are moved to swap space (on disk) to free up RAM. ",
+            " FIFO (First-In-First-Out) replaces the oldest page in memory when a new page needs to be loaded. ",
+            " LRU (Least Recently Used) replaces the page that has not been used for the longest time, keeping frequently used pages in memory.",
+            " The Optimal page replacement algorithm replaces the page that will not be used for the longest time in the future, though it's impractical. ",
+            " Swapping moves a whole process from RAM to disk when memory is full, and brings it back to RAM when needed. ",
+            " Excessive swapping can slow down the system because accessing the disk is slower than accessing RAM.",
 
         ]
     },
     {
         chapterIndex: 3,
         notes: [
-          " File Concept: A file is a collection of data stored on a computer, such as text, images, videos, or programs",
-          " Sequential Access: Data in a file is read or written in order from start to finish, like reading a book.",
-          " Direct Access: Allows jumping to any part of the file directly, similar to using an index in a book.",
-          " Directory Structure: Organizes files in a system for easier management, often using folders.",
-          " Single-level Directory: All files are stored in one list without any subdirectories.",
-          " Two-level Directory: Has one directory for each user and another for storing files, offering a bit more organization.",
-          " Hierarchical Directory: Uses nested directories (folders within folders) to form a tree-like structure for better organization.",
-          " Mounting: The process of linking a file system to the operating system’s directory structure to make it accessible for use.",
-          " File Sharing: Allows multiple users or systems to access and share the same files through network file systems or protocols.",
-          " Contiguous Allocation: Files are stored in consecutive memory blocks, providing fast access but causing fragmentation if files grow.",
-          " Linked Allocation: Files are stored in non-contiguous blocks, where each block points to the next. It is flexible but slower to access.",
-          " Indexed Allocation: Uses an index block to store the addresses of all file blocks, ensuring faster access and avoiding fragmentation.",
-          " FCFS (First Come, First Served): A disk scheduling algorithm that processes requests in the order they arrive, though it can be inefficient.",
-          " SSTF (Shortest Seek Time First): A disk scheduling algorithm that processes the closest request to the current head position, reducing travel time.",
-          " SCAN Algorithm: The disk head moves in one direction until it reaches the end and then reverses direction, like an elevator moving up and down.",
-       
+            " File Concept: A file is a collection of data stored on a computer, such as text, images, videos, or programs",
+            " Sequential Access: Data in a file is read or written in order from start to finish, like reading a book.",
+            " Direct Access: Allows jumping to any part of the file directly, similar to using an index in a book.",
+            " Directory Structure: Organizes files in a system for easier management, often using folders.",
+            " Single-level Directory: All files are stored in one list without any subdirectories.",
+            " Two-level Directory: Has one directory for each user and another for storing files, offering a bit more organization.",
+            " Hierarchical Directory: Uses nested directories (folders within folders) to form a tree-like structure for better organization.",
+            " Mounting: The process of linking a file system to the operating system’s directory structure to make it accessible for use.",
+            " File Sharing: Allows multiple users or systems to access and share the same files through network file systems or protocols.",
+            " Contiguous Allocation: Files are stored in consecutive memory blocks, providing fast access but causing fragmentation if files grow.",
+            " Linked Allocation: Files are stored in non-contiguous blocks, where each block points to the next. It is flexible but slower to access.",
+            " Indexed Allocation: Uses an index block to store the addresses of all file blocks, ensuring faster access and avoiding fragmentation.",
+            " FCFS (First Come, First Served): A disk scheduling algorithm that processes requests in the order they arrive, though it can be inefficient.",
+            " SSTF (Shortest Seek Time First): A disk scheduling algorithm that processes the closest request to the current head position, reducing travel time.",
+            " SCAN Algorithm: The disk head moves in one direction until it reaches the end and then reverses direction, like an elevator moving up and down.",
+
 
 
         ]
-    },{
+    }, {
         chapterIndex: 4,
         notes: [
-          " I/O Devices: Hardware for input (e.g., keyboard) and output (e.g., monitor).",
-          " I/O Controllers: Manage data transfer between CPU and I/O devices.",
-          " Device Driver: Software that helps the OS control hardware devices",
-          " Interrupt: A signal that stops the CPU to handle urgent tasks.",
-          " ISR (Interrupt Service Routine): A program that handles the interrupt.",
-          " DMA (Direct Memory Access): Allows devices to transfer data directly to memory, without the CPU.",
-          " Benefit: Frees up CPU for other tasks, improving performance.",
-         
+            " I/O Devices: Hardware for input (e.g., keyboard) and output (e.g., monitor).",
+            " I/O Controllers: Manage data transfer between CPU and I/O devices.",
+            " Device Driver: Software that helps the OS control hardware devices",
+            " Interrupt: A signal that stops the CPU to handle urgent tasks.",
+            " ISR (Interrupt Service Routine): A program that handles the interrupt.",
+            " DMA (Direct Memory Access): Allows devices to transfer data directly to memory, without the CPU.",
+            " Benefit: Frees up CPU for other tasks, improving performance.",
+
 
         ]
     },
     {
         chapterIndex: 5,
         notes: [
-          " Access Control and Permissions: Controls who can access resources, and defines what actions they can perform (e.g., view, edit, or delete).",
-          " Authentication Methods: Verifies identity using passwords, fingerprints, or codes sent to your phone (2FA).",
-          " Threats: Risks include harmful software (malware), viruses, fake messages (phishing), and denial-of-service (DoS) attacks.",
-          " Security Mechanisms: Firewalls block harmful traffic, IDS detects suspicious activity, and encryption protects sensitive data.",
-          " Data Backup: Regularly backing up data ensures recovery in case of attacks or failures.",
-          " Security Patches: Updating software regularly helps fix vulnerabilities that could be exploited by attackers.",
-        
+            " Access Control and Permissions: Controls who can access resources, and defines what actions they can perform (e.g., view, edit, or delete).",
+            " Authentication Methods: Verifies identity using passwords, fingerprints, or codes sent to your phone (2FA).",
+            " Threats: Risks include harmful software (malware), viruses, fake messages (phishing), and denial-of-service (DoS) attacks.",
+            " Security Mechanisms: Firewalls block harmful traffic, IDS detects suspicious activity, and encryption protects sensitive data.",
+            " Data Backup: Regularly backing up data ensures recovery in case of attacks or failures.",
+            " Security Patches: Updating software regularly helps fix vulnerabilities that could be exploited by attackers.",
+
 
         ]
     },
@@ -840,13 +840,13 @@ const articles = [
     {
         chapterIndex: 0,
         articles: [
-          
+
         ]
     },
     {
         chapterIndex: 1,
         articles: [
-           
+
         ]
     },
     {

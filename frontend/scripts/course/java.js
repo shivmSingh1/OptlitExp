@@ -1,4 +1,4 @@
-import { handleTabSwitching, renderChapters, setChapterLinkListeners } from "/minorProject/modules/chapterModule.js";
+import { handleTabSwitching, renderChapters, setChapterLinkListeners } from "../../modules/chapterModule";
 
 // Chapters
 const chapters = [
@@ -657,7 +657,7 @@ class Example {
     },
     {
         title: "Chapter 4: Java Collection Framework",
-        content:`<p>The <strong>Java Collections Framework</strong> is a powerful hierarchy of interfaces and classes designed to store, retrieve, and manipulate groups of objects efficiently. It provides ready-made implementations for data structures like lists, sets, and maps.</p>
+        content: `<p>The <strong>Java Collections Framework</strong> is a powerful hierarchy of interfaces and classes designed to store, retrieve, and manipulate groups of objects efficiently. It provides ready-made implementations for data structures like lists, sets, and maps.</p>
 <hr>
 <h3><strong>1. Core Interfaces in Collections</strong></h3>
 <h4><strong>a. List Interface</strong></h4>
@@ -1111,8 +1111,8 @@ public class ThreadExample {
   `
     },
     {
-        title:"Chapter: 6 File Handling ",
-        content:`File handling in Java allows you to read from and write to files on the disk. It involves using various classes in the java.io package, such as File, FileReader, BufferedReader, FileWriter, BufferedWriter, and others.
+        title: "Chapter: 6 File Handling ",
+        content: `File handling in Java allows you to read from and write to files on the disk. It involves using various classes in the java.io package, such as File, FileReader, BufferedReader, FileWriter, BufferedWriter, and others.
 
 Let's break down the main operations:
 
@@ -1226,7 +1226,7 @@ public class DeserializationExample {
 Explanation: In this example, the ObjectInputStream is used to read the serialized object from the student.ser file. The object is then deserialized and cast back to its original type (Student).
 <strong>Here’s a summary code demonstrating File Handling, Serialization, and Deserialization in Java:</strong>
 `,
-        code:`import java.io.*;
+        code: `import java.io.*;
 
 class Student implements Serializable {
     private String name;
@@ -1267,8 +1267,8 @@ public class SerializationDeserializationExample {
 `
     },
     {
-        title:`Chapter : 7  Java 8 features`,
-        content:`<p>Java 8 introduced several new features that improved the language and made it more powerful, especially in terms of functional programming. Let&rsquo;s break down these features:</p>
+        title: `Chapter : 7  Java 8 features`,
+        content: `<p>Java 8 introduced several new features that improved the language and made it more powerful, especially in terms of functional programming. Let&rsquo;s break down these features:</p>
 <hr>
 <h3>1. <strong>Lambda Expressions</strong></h3>
 <p>Lambda expressions allow you to pass behavior (as an instance of a functional interface) as an argument to a method. They provide a concise way to express instances of single-method interfaces (functional interfaces).</p>
@@ -1407,12 +1407,12 @@ public class StaticMethodExample {
 <strong>Here are the summary codes for the Java 8 features:</strong>
 `,
 
-code:``,
+        code: ``,
 
     },
     {
-        title:`Chapter: 8 Advanced Java`,
-        content:`<p>Generics allow you to write more flexible and reusable code by defining classes, interfaces, and methods with type parameters. It enables type safety by allowing you to specify the types of objects that a class or method can work with, at compile time. This reduces runtime errors and eliminates the need for explicit type casting.</p>
+        title: `Chapter: 8 Advanced Java`,
+        content: `<p>Generics allow you to write more flexible and reusable code by defining classes, interfaces, and methods with type parameters. It enables type safety by allowing you to specify the types of objects that a class or method can work with, at compile time. This reduces runtime errors and eliminates the need for explicit type casting.</p>
 <h4>Example:</h4>
 <pre><div><div>java</div><code>// Generic class
 class Box&lt;T&gt; {
@@ -1542,10 +1542,10 @@ public class Client {
         </ul>
     </li>
 </ul>`,
-code:``,
-    
+        code: ``,
+
     }
-    
+
 ];
 
 
@@ -1580,200 +1580,200 @@ const practiceQuestions = [
     {
         chapterIndex: 2,
         questions: [
-            
-                {
-                    question: "What is the difference between a class and an object in Java?",
-                    solution: "class Car {\n    String model;\n\n    Car(String model) {\n        this.model = model;\n    }\n\n    void displayModel() {\n        System.out.println(\"Car model: \" + model);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Car car = new Car(\"Tesla\");\n        car.displayModel(); // Output: Car model: Tesla\n    }\n}"
-                },
-                {
-                    question: "What is the role of a constructor in a class? Can a constructor have a return type?",
-                    code: "class Car {\n    String model;\n\n    // Constructor\n    Car(String model) {\n        this.model = model;\n    }\n\n    void displayModel() {\n        System.out.println(\"Car model: \" + model);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Car car = new Car(\"Tesla\");\n        car.displayModel(); // Output: Car model: Tesla\n    }\n}"
-                },
-                {
-                    question: "What is inheritance in Java, and how does it benefit code reusability?",
-                    solution: "class Animal {\n    void sound() {\n        System.out.println(\"Some sound\");\n    }\n}\n\nclass Dog extends Animal {\n    void sound() {\n        System.out.println(\"Bark\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Dog dog = new Dog();\n        dog.sound(); // Output: Bark\n    }\n}"
-                },
-                {
-                    question: "What is polymorphism in Java, and how does method overriding demonstrate it?",
-                    solution: "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal animal = new Dog();\n        animal.sound(); // Output: Dog barks\n    }\n}"
-                },
-                {
-                    question: "What is the difference between encapsulation and abstraction?",
-                    solution: "class Person {\n    private String name;\n\n    // Encapsulation: Getter and Setter\n    public String getName() {\n        return name;\n    }\n\n    public void setName(String name) {\n        this.name = name;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Person person = new Person();\n        person.setName(\"John\");\n        System.out.println(person.getName()); // Output: John\n    }\n}\n\n// Abstraction\nabstract class Animal {\n    abstract void sound();\n}\n\nclass Dog extends Animal {\n    void sound() {\n        System.out.println(\"Bark\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal animal = new Dog();\n        animal.sound(); // Output: Bark\n    }\n}"
-                }
-            ]
-            
-        
+
+            {
+                question: "What is the difference between a class and an object in Java?",
+                solution: "class Car {\n    String model;\n\n    Car(String model) {\n        this.model = model;\n    }\n\n    void displayModel() {\n        System.out.println(\"Car model: \" + model);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Car car = new Car(\"Tesla\");\n        car.displayModel(); // Output: Car model: Tesla\n    }\n}"
+            },
+            {
+                question: "What is the role of a constructor in a class? Can a constructor have a return type?",
+                code: "class Car {\n    String model;\n\n    // Constructor\n    Car(String model) {\n        this.model = model;\n    }\n\n    void displayModel() {\n        System.out.println(\"Car model: \" + model);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Car car = new Car(\"Tesla\");\n        car.displayModel(); // Output: Car model: Tesla\n    }\n}"
+            },
+            {
+                question: "What is inheritance in Java, and how does it benefit code reusability?",
+                solution: "class Animal {\n    void sound() {\n        System.out.println(\"Some sound\");\n    }\n}\n\nclass Dog extends Animal {\n    void sound() {\n        System.out.println(\"Bark\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Dog dog = new Dog();\n        dog.sound(); // Output: Bark\n    }\n}"
+            },
+            {
+                question: "What is polymorphism in Java, and how does method overriding demonstrate it?",
+                solution: "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal animal = new Dog();\n        animal.sound(); // Output: Dog barks\n    }\n}"
+            },
+            {
+                question: "What is the difference between encapsulation and abstraction?",
+                solution: "class Person {\n    private String name;\n\n    // Encapsulation: Getter and Setter\n    public String getName() {\n        return name;\n    }\n\n    public void setName(String name) {\n        this.name = name;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Person person = new Person();\n        person.setName(\"John\");\n        System.out.println(person.getName()); // Output: John\n    }\n}\n\n// Abstraction\nabstract class Animal {\n    abstract void sound();\n}\n\nclass Dog extends Animal {\n    void sound() {\n        System.out.println(\"Bark\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal animal = new Dog();\n        animal.sound(); // Output: Bark\n    }\n}"
+            }
+        ]
+
+
     },
-    
-        {
-            chapterIndex: 3,
-            questions: [
-                {
-                    question: "Write a program to store and print the elements of an array.",
-                    solution: "public class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3, 4, 5};\n        for (int i = 0; i < arr.length; i++) {\n            System.out.println(arr[i]); // Output: 1 2 3 4 5\n        }\n    }\n}"
-                },
-                {
-                    question: "Write a program to reverse a string.",
-                    solution: "public class Main {\n    public static void main(String[] args) {\n        String str = \"Hello\";\n        String reversed = \"\";\n        for (int i = str.length() - 1; i >= 0; i--) {\n            reversed += str.charAt(i);\n        }\n        System.out.println(reversed); // Output: olleH\n    }\n}"
-                },
-                {
-                    question: "Write a program to handle division by zero using exception handling.",
-                    solution: "public class Main {\n    public static void main(String[] args) {\n        try {\n            int result = 10 / 0; // This will throw ArithmeticException\n        } catch (ArithmeticException e) {\n            System.out.println(\"Error: Division by zero\"); // Output: Error: Division by zero\n        }\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of access modifiers.",
-                    solution: "class Person {\n    public String name;\n    private int age;\n    protected String address;\n\n    public void setAge(int age) {\n        this.age = age;\n    }\n\n    public int getAge() {\n        return age;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Person person = new Person();\n        person.name = \"John\"; // Public access\n        person.setAge(25); // Accessing private method\n        person.address = \"New York\"; // Protected access\n        System.out.println(person.name + \" - \" + person.getAge()); // Output: John - 25\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of static and final keywords.",
-                    solution: "class MyClass {\n    static int count = 0;\n    final int MAX = 10;\n\n    public MyClass() {\n        count++;\n    }\n\n    public void show() {\n        System.out.println(\"Count: \" + count + \", MAX: \" + MAX);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyClass obj1 = new MyClass();\n        obj1.show(); // Output: Count: 1, MAX: 10\n        MyClass obj2 = new MyClass();\n        obj2.show(); // Output: Count: 2, MAX: 10\n    }\n}"
-                }
-            ]
-        },
-        
-    
-        {
-            chapterIndex: 4, 
-            questions: [
-                {
-                    question: "Write a program to demonstrate the use of an ArrayList in Java.",
-                    solution: "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Cherry\");\n        for (String item : list) {\n            System.out.println(item); // Output: Apple, Banana, Cherry\n        }\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of a HashSet in Java.",
-                    solution: "import java.util.HashSet;\n\npublic class Main {\n    public static void main(String[] args) {\n        HashSet<String> set = new HashSet<>();\n        set.add(\"Apple\");\n        set.add(\"Banana\");\n        set.add(\"Apple\");\n        for (String item : set) {\n            System.out.println(item); // Output: Apple, Banana (Order is not guaranteed)\n        }\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of a HashMap in Java.",
-                    solution: "import java.util.HashMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> map = new HashMap<>();\n        map.put(\"Apple\", 1);\n        map.put(\"Banana\", 2);\n        map.put(\"Cherry\", 3);\n        System.out.println(\"Value for Banana: \" + map.get(\"Banana\")); // Output: Value for Banana: 2\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of an Iterator with a List.",
-                    solution: "import java.util.ArrayList;\nimport java.util.Iterator;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Cherry\");\n        Iterator<String> iterator = list.iterator();\n        while (iterator.hasNext()) {\n            System.out.println(iterator.next()); // Output: Apple, Banana, Cherry\n        }\n    }\n}"
-                },
-                {
-                    question: "Write a program to filter a list using Java Streams.",
-                    solution: "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.stream.Collectors;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Cherry\");\n        List<String> filteredList = list.stream().filter(s -> s.startsWith(\"A\")).collect(Collectors.toList());\n        filteredList.forEach(System.out::println); // Output: Apple\n    }\n}"
-                }
-            ]
-        },
-        
-    
-        {
-            chapterIndex: 5,
-            questions: [
-                {
-                    question: "Write a program to create a thread using the Thread class.",
-                    solution: "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread is running\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyThread thread = new MyThread();\n        thread.start(); // Output: Thread is running\n    }\n}"
-                },
-                {
-                    question: "Write a program to create a thread using the Runnable interface.",
-                    solution: "class MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Runnable thread is running\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyRunnable runnable = new MyRunnable();\n        Thread thread = new Thread(runnable);\n        thread.start(); // Output: Runnable thread is running\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the lifecycle of a thread.",
-                    solution: "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread is running\");\n        try {\n            Thread.sleep(1000); // Thread is in sleeping state\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        System.out.println(\"Thread has finished\"); // Thread is in terminated state\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        MyThread thread = new MyThread();\n        System.out.println(\"Thread state before start: \" + thread.getState());\n        thread.start();\n        System.out.println(\"Thread state after start: \" + thread.getState());\n        thread.join();\n        System.out.println(\"Thread state after finish: \" + thread.getState());\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate thread synchronization in Java.",
-                    solution: "class Counter {\n    private int count = 0;\n\n    public synchronized void increment() {\n        count++;\n    }\n\n    public synchronized int getCount() {\n        return count;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        Counter counter = new Counter();\n        Thread thread1 = new Thread(() -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        });\n        Thread thread2 = new Thread(() -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        });\n        thread1.start();\n        thread2.start();\n        thread1.join();\n        thread2.join();\n        System.out.println(\"Final count: \" + counter.getCount()); // Output: Final count: 2000\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate thread interruption in Java.",
-                    solution: "class MyThread extends Thread {\n    public void run() {\n        try {\n            for (int i = 0; i < 5; i++) {\n                System.out.println(\"Running thread: \" + i);\n                Thread.sleep(1000);\n            }\n        } catch (InterruptedException e) {\n            System.out.println(\"Thread interrupted\"); // Output: Thread interrupted\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        MyThread thread = new MyThread();\n        thread.start();\n        Thread.sleep(2000);\n        thread.interrupt();\n    }\n}"
-                }
-            ]
-        },
-        
-        {
-            chapterIndex: 6,
-            questions: [
-                {
-                    question: "Write a program to read the content of a text file and display it.",
-                    solution: "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileReader fr = new FileReader(\"file.txt\");\n        BufferedReader br = new BufferedReader(fr);\n        String line;\n        while ((line = br.readLine()) != null) {\n            System.out.println(line); // Output: Content of file.txt\n        }\n        br.close();\n        fr.close();\n    }\n}"
-                },
-                {
-                    question: "Write a program to write data into a text file.",
-                    solution: "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileWriter fw = new FileWriter(\"file.txt\");\n        BufferedWriter bw = new BufferedWriter(fw);\n        bw.write(\"Hello, World!\");\n        bw.newLine();\n        bw.write(\"This is a text file.\");\n        bw.close(); // Content is written to file.txt\n    }\n}"
-                },
-                {
-                    question: "Write a program to append data to an existing text file.",
-                    solution:"import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileWriter fw = new FileWriter(\"file.txt\", true);\n        BufferedWriter bw = new BufferedWriter(fw);\n        bw.write(\"Appending new content to the file.\");\n        bw.newLine();\n        bw.close(); // Data appended to file.txt\n    }\n}"
-                },
-                {
-                    question: "Write a program to serialize an object in Java.",
-                    solution: "import java.io.*;\n\nclass Person implements Serializable {\n    String name;\n    int age;\n    Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        Person person = new Person(\"John\", 25);\n        FileOutputStream fileOut = new FileOutputStream(\"person.ser\");\n        ObjectOutputStream out = new ObjectOutputStream(fileOut);\n        out.writeObject(person);\n        out.close();\n        fileOut.close(); // Object serialized into person.ser\n    }\n}"
-                },
-                {
-                    question: "Write a program to deserialize an object in Java.",
-                    solution: "import java.io.*;\n\nclass Person implements Serializable {\n    String name;\n    int age;\n    Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws IOException, ClassNotFoundException {\n        FileInputStream fileIn = new FileInputStream(\"person.ser\");\n        ObjectInputStream in = new ObjectInputStream(fileIn);\n        Person person = (Person) in.readObject();\n        in.close();\n        fileIn.close();\n        System.out.println(\"Deserialized Person: \" + person.name + \", Age: \" + person.age); // Output: John, 25\n    }\n}"
-                }
-            ]
-        },
-        
-        {
-            chapterIndex: 7,
-            questions: [
-                {
-                    question: "Write a program to demonstrate the use of a lambda expression to implement a functional interface.",
-                    solution: "interface Greet {\n    void greet(String name);\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Greet greet = (name) -> System.out.println(\"Hello, \" + name);\n        greet.greet(\"John\"); // Output: Hello, John\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate a functional interface with a single abstract method and how to use lambda expressions to implement it.",
-                    solution: "interface Add {\n    int sum(int a, int b);\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Add add = (a, b) -> a + b;\n        System.out.println(add.sum(10, 20)); // Output: 30\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of the Stream API to filter and print even numbers from a list of integers.",
-                    code: "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n        numbers.stream()\n               .filter(n -> n % 2 == 0)\n               .forEach(System.out::println); // Output: 2, 4, 6, 8, 10\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate default and static methods in interfaces.",
-                    solution: "interface MyInterface {\n    default void defaultMethod() {\n        System.out.println(\"This is a default method\");\n    }\n    static void staticMethod() {\n        System.out.println(\"This is a static method\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyInterface obj = new MyInterface() {};\n        obj.defaultMethod(); // Output: This is a default method\n        MyInterface.staticMethod(); // Output: This is a static method\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of method references with the Stream API.",
-                    solution: "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"John\", \"Jane\", \"Alex\", \"Emily\");\n        names.stream()\n             .map(String::toUpperCase)\n             .forEach(System.out::println); // Output: JOHN, JANE, ALEX, EMILY\n    }\n}"
-                }
-            ]
-        },
-        
-        {
-            chapterIndex: 8,
-            questions: [
-                {
-                    question: "Write a program to demonstrate the use of Generics in Java.",
-                    solution: "class Box<T> {\n    private T value;\n    public void setValue(T value) {\n        this.value = value;\n    }\n    public T getValue() {\n        return value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Box<Integer> intBox = new Box<>();\n        intBox.setValue(10);\n        System.out.println(intBox.getValue()); // Output: 10\n\n        Box<String> strBox = new Box<>();\n        strBox.setValue(\"Hello\");\n        System.out.println(strBox.getValue()); // Output: Hello\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of annotations in Java.",
-                    solution: "import java.lang.annotation.*;\n\n@Target(ElementType.METHOD)\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnnotation {\n    String value();\n}\n\npublic class Main {\n    @MyAnnotation(value = \"Hello, Annotation!\")\n    public void myMethod() {\n        System.out.println(\"Method executed\");\n    }\n\n    public static void main(String[] args) throws Exception {\n        Main obj = new Main();\n        obj.myMethod();\n        MyAnnotation annotation = obj.getClass().getMethod(\"myMethod\").getAnnotation(MyAnnotation.class);\n        System.out.println(annotation.value()); // Output: Hello, Annotation!\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of a basic Socket in Java for networking.",
-                    solution: "// Client Code\nimport java.net.*;\nimport java.io.*;\n\npublic class Client {\n    public static void main(String[] args) throws IOException {\n        Socket socket = new Socket(\"localhost\", 1234);\n        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);\n        out.println(\"Hello Server!\");\n        socket.close();\n    }\n}\n\n// Server Code\nimport java.net.*;\nimport java.io.*;\n\npublic class Server {\n    public static void main(String[] args) throws IOException {\n        ServerSocket serverSocket = new ServerSocket(1234);\n        Socket socket = serverSocket.accept();\n        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));\n        String message = in.readLine();\n        System.out.println(\"Received from client: \" + message); // Output: Hello Server!\n        socket.close();\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of wildcard with generics in Java.",
-                    solution: "class Printer {\n    public static void printItems(List<?> list) {\n        for (Object item : list) {\n            System.out.println(item);\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> intList = Arrays.asList(1, 2, 3, 4);\n        List<String> strList = Arrays.asList(\"A\", \"B\", \"C\");\n        Printer.printItems(intList); // Output: 1, 2, 3, 4\n        Printer.printItems(strList); // Output: A, B, C\n    }\n}"
-                },
-                {
-                    question: "Write a program to demonstrate the use of `@Override` annotation in Java.",
-                    solution: "class Animal {\n    public void makeSound() {\n        System.out.println(\"Animal makes sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Dog barks\"); // Output: Dog barks\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Dog dog = new Dog();\n        dog.makeSound();\n    }\n}"
-                }
-            ]
-        }
-        
-                                    ];
-                                    
-                                
-                            
-                        
-                        
-                    
-                
-            
- // Notes part
+
+    {
+        chapterIndex: 3,
+        questions: [
+            {
+                question: "Write a program to store and print the elements of an array.",
+                solution: "public class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3, 4, 5};\n        for (int i = 0; i < arr.length; i++) {\n            System.out.println(arr[i]); // Output: 1 2 3 4 5\n        }\n    }\n}"
+            },
+            {
+                question: "Write a program to reverse a string.",
+                solution: "public class Main {\n    public static void main(String[] args) {\n        String str = \"Hello\";\n        String reversed = \"\";\n        for (int i = str.length() - 1; i >= 0; i--) {\n            reversed += str.charAt(i);\n        }\n        System.out.println(reversed); // Output: olleH\n    }\n}"
+            },
+            {
+                question: "Write a program to handle division by zero using exception handling.",
+                solution: "public class Main {\n    public static void main(String[] args) {\n        try {\n            int result = 10 / 0; // This will throw ArithmeticException\n        } catch (ArithmeticException e) {\n            System.out.println(\"Error: Division by zero\"); // Output: Error: Division by zero\n        }\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of access modifiers.",
+                solution: "class Person {\n    public String name;\n    private int age;\n    protected String address;\n\n    public void setAge(int age) {\n        this.age = age;\n    }\n\n    public int getAge() {\n        return age;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Person person = new Person();\n        person.name = \"John\"; // Public access\n        person.setAge(25); // Accessing private method\n        person.address = \"New York\"; // Protected access\n        System.out.println(person.name + \" - \" + person.getAge()); // Output: John - 25\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of static and final keywords.",
+                solution: "class MyClass {\n    static int count = 0;\n    final int MAX = 10;\n\n    public MyClass() {\n        count++;\n    }\n\n    public void show() {\n        System.out.println(\"Count: \" + count + \", MAX: \" + MAX);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyClass obj1 = new MyClass();\n        obj1.show(); // Output: Count: 1, MAX: 10\n        MyClass obj2 = new MyClass();\n        obj2.show(); // Output: Count: 2, MAX: 10\n    }\n}"
+            }
+        ]
+    },
+
+
+    {
+        chapterIndex: 4,
+        questions: [
+            {
+                question: "Write a program to demonstrate the use of an ArrayList in Java.",
+                solution: "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Cherry\");\n        for (String item : list) {\n            System.out.println(item); // Output: Apple, Banana, Cherry\n        }\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of a HashSet in Java.",
+                solution: "import java.util.HashSet;\n\npublic class Main {\n    public static void main(String[] args) {\n        HashSet<String> set = new HashSet<>();\n        set.add(\"Apple\");\n        set.add(\"Banana\");\n        set.add(\"Apple\");\n        for (String item : set) {\n            System.out.println(item); // Output: Apple, Banana (Order is not guaranteed)\n        }\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of a HashMap in Java.",
+                solution: "import java.util.HashMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> map = new HashMap<>();\n        map.put(\"Apple\", 1);\n        map.put(\"Banana\", 2);\n        map.put(\"Cherry\", 3);\n        System.out.println(\"Value for Banana: \" + map.get(\"Banana\")); // Output: Value for Banana: 2\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of an Iterator with a List.",
+                solution: "import java.util.ArrayList;\nimport java.util.Iterator;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Cherry\");\n        Iterator<String> iterator = list.iterator();\n        while (iterator.hasNext()) {\n            System.out.println(iterator.next()); // Output: Apple, Banana, Cherry\n        }\n    }\n}"
+            },
+            {
+                question: "Write a program to filter a list using Java Streams.",
+                solution: "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.stream.Collectors;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Cherry\");\n        List<String> filteredList = list.stream().filter(s -> s.startsWith(\"A\")).collect(Collectors.toList());\n        filteredList.forEach(System.out::println); // Output: Apple\n    }\n}"
+            }
+        ]
+    },
+
+
+    {
+        chapterIndex: 5,
+        questions: [
+            {
+                question: "Write a program to create a thread using the Thread class.",
+                solution: "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread is running\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyThread thread = new MyThread();\n        thread.start(); // Output: Thread is running\n    }\n}"
+            },
+            {
+                question: "Write a program to create a thread using the Runnable interface.",
+                solution: "class MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Runnable thread is running\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyRunnable runnable = new MyRunnable();\n        Thread thread = new Thread(runnable);\n        thread.start(); // Output: Runnable thread is running\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the lifecycle of a thread.",
+                solution: "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread is running\");\n        try {\n            Thread.sleep(1000); // Thread is in sleeping state\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        System.out.println(\"Thread has finished\"); // Thread is in terminated state\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        MyThread thread = new MyThread();\n        System.out.println(\"Thread state before start: \" + thread.getState());\n        thread.start();\n        System.out.println(\"Thread state after start: \" + thread.getState());\n        thread.join();\n        System.out.println(\"Thread state after finish: \" + thread.getState());\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate thread synchronization in Java.",
+                solution: "class Counter {\n    private int count = 0;\n\n    public synchronized void increment() {\n        count++;\n    }\n\n    public synchronized int getCount() {\n        return count;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        Counter counter = new Counter();\n        Thread thread1 = new Thread(() -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        });\n        Thread thread2 = new Thread(() -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        });\n        thread1.start();\n        thread2.start();\n        thread1.join();\n        thread2.join();\n        System.out.println(\"Final count: \" + counter.getCount()); // Output: Final count: 2000\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate thread interruption in Java.",
+                solution: "class MyThread extends Thread {\n    public void run() {\n        try {\n            for (int i = 0; i < 5; i++) {\n                System.out.println(\"Running thread: \" + i);\n                Thread.sleep(1000);\n            }\n        } catch (InterruptedException e) {\n            System.out.println(\"Thread interrupted\"); // Output: Thread interrupted\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        MyThread thread = new MyThread();\n        thread.start();\n        Thread.sleep(2000);\n        thread.interrupt();\n    }\n}"
+            }
+        ]
+    },
+
+    {
+        chapterIndex: 6,
+        questions: [
+            {
+                question: "Write a program to read the content of a text file and display it.",
+                solution: "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileReader fr = new FileReader(\"file.txt\");\n        BufferedReader br = new BufferedReader(fr);\n        String line;\n        while ((line = br.readLine()) != null) {\n            System.out.println(line); // Output: Content of file.txt\n        }\n        br.close();\n        fr.close();\n    }\n}"
+            },
+            {
+                question: "Write a program to write data into a text file.",
+                solution: "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileWriter fw = new FileWriter(\"file.txt\");\n        BufferedWriter bw = new BufferedWriter(fw);\n        bw.write(\"Hello, World!\");\n        bw.newLine();\n        bw.write(\"This is a text file.\");\n        bw.close(); // Content is written to file.txt\n    }\n}"
+            },
+            {
+                question: "Write a program to append data to an existing text file.",
+                solution: "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileWriter fw = new FileWriter(\"file.txt\", true);\n        BufferedWriter bw = new BufferedWriter(fw);\n        bw.write(\"Appending new content to the file.\");\n        bw.newLine();\n        bw.close(); // Data appended to file.txt\n    }\n}"
+            },
+            {
+                question: "Write a program to serialize an object in Java.",
+                solution: "import java.io.*;\n\nclass Person implements Serializable {\n    String name;\n    int age;\n    Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        Person person = new Person(\"John\", 25);\n        FileOutputStream fileOut = new FileOutputStream(\"person.ser\");\n        ObjectOutputStream out = new ObjectOutputStream(fileOut);\n        out.writeObject(person);\n        out.close();\n        fileOut.close(); // Object serialized into person.ser\n    }\n}"
+            },
+            {
+                question: "Write a program to deserialize an object in Java.",
+                solution: "import java.io.*;\n\nclass Person implements Serializable {\n    String name;\n    int age;\n    Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws IOException, ClassNotFoundException {\n        FileInputStream fileIn = new FileInputStream(\"person.ser\");\n        ObjectInputStream in = new ObjectInputStream(fileIn);\n        Person person = (Person) in.readObject();\n        in.close();\n        fileIn.close();\n        System.out.println(\"Deserialized Person: \" + person.name + \", Age: \" + person.age); // Output: John, 25\n    }\n}"
+            }
+        ]
+    },
+
+    {
+        chapterIndex: 7,
+        questions: [
+            {
+                question: "Write a program to demonstrate the use of a lambda expression to implement a functional interface.",
+                solution: "interface Greet {\n    void greet(String name);\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Greet greet = (name) -> System.out.println(\"Hello, \" + name);\n        greet.greet(\"John\"); // Output: Hello, John\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate a functional interface with a single abstract method and how to use lambda expressions to implement it.",
+                solution: "interface Add {\n    int sum(int a, int b);\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Add add = (a, b) -> a + b;\n        System.out.println(add.sum(10, 20)); // Output: 30\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of the Stream API to filter and print even numbers from a list of integers.",
+                code: "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n        numbers.stream()\n               .filter(n -> n % 2 == 0)\n               .forEach(System.out::println); // Output: 2, 4, 6, 8, 10\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate default and static methods in interfaces.",
+                solution: "interface MyInterface {\n    default void defaultMethod() {\n        System.out.println(\"This is a default method\");\n    }\n    static void staticMethod() {\n        System.out.println(\"This is a static method\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyInterface obj = new MyInterface() {};\n        obj.defaultMethod(); // Output: This is a default method\n        MyInterface.staticMethod(); // Output: This is a static method\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of method references with the Stream API.",
+                solution: "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"John\", \"Jane\", \"Alex\", \"Emily\");\n        names.stream()\n             .map(String::toUpperCase)\n             .forEach(System.out::println); // Output: JOHN, JANE, ALEX, EMILY\n    }\n}"
+            }
+        ]
+    },
+
+    {
+        chapterIndex: 8,
+        questions: [
+            {
+                question: "Write a program to demonstrate the use of Generics in Java.",
+                solution: "class Box<T> {\n    private T value;\n    public void setValue(T value) {\n        this.value = value;\n    }\n    public T getValue() {\n        return value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Box<Integer> intBox = new Box<>();\n        intBox.setValue(10);\n        System.out.println(intBox.getValue()); // Output: 10\n\n        Box<String> strBox = new Box<>();\n        strBox.setValue(\"Hello\");\n        System.out.println(strBox.getValue()); // Output: Hello\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of annotations in Java.",
+                solution: "import java.lang.annotation.*;\n\n@Target(ElementType.METHOD)\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnnotation {\n    String value();\n}\n\npublic class Main {\n    @MyAnnotation(value = \"Hello, Annotation!\")\n    public void myMethod() {\n        System.out.println(\"Method executed\");\n    }\n\n    public static void main(String[] args) throws Exception {\n        Main obj = new Main();\n        obj.myMethod();\n        MyAnnotation annotation = obj.getClass().getMethod(\"myMethod\").getAnnotation(MyAnnotation.class);\n        System.out.println(annotation.value()); // Output: Hello, Annotation!\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of a basic Socket in Java for networking.",
+                solution: "// Client Code\nimport java.net.*;\nimport java.io.*;\n\npublic class Client {\n    public static void main(String[] args) throws IOException {\n        Socket socket = new Socket(\"localhost\", 1234);\n        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);\n        out.println(\"Hello Server!\");\n        socket.close();\n    }\n}\n\n// Server Code\nimport java.net.*;\nimport java.io.*;\n\npublic class Server {\n    public static void main(String[] args) throws IOException {\n        ServerSocket serverSocket = new ServerSocket(1234);\n        Socket socket = serverSocket.accept();\n        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));\n        String message = in.readLine();\n        System.out.println(\"Received from client: \" + message); // Output: Hello Server!\n        socket.close();\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of wildcard with generics in Java.",
+                solution: "class Printer {\n    public static void printItems(List<?> list) {\n        for (Object item : list) {\n            System.out.println(item);\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> intList = Arrays.asList(1, 2, 3, 4);\n        List<String> strList = Arrays.asList(\"A\", \"B\", \"C\");\n        Printer.printItems(intList); // Output: 1, 2, 3, 4\n        Printer.printItems(strList); // Output: A, B, C\n    }\n}"
+            },
+            {
+                question: "Write a program to demonstrate the use of `@Override` annotation in Java.",
+                solution: "class Animal {\n    public void makeSound() {\n        System.out.println(\"Animal makes sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Dog barks\"); // Output: Dog barks\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Dog dog = new Dog();\n        dog.makeSound();\n    }\n}"
+            }
+        ]
+    }
+
+];
+
+
+
+
+
+
+
+
+// Notes part
 const notes = [
     {
         chapterIndex: 1,
@@ -1804,98 +1804,98 @@ const notes = [
     {
         chapterIndex: 3,
         notes: [
-           "Arrays are used to store multiple elements of the same data type in contiguous memory locations.",
-           "Strings are immutable objects used to handle text, with operations like concatenation, slicing, and case conversion.",
-           "Exception handling is a mechanism to handle runtime errors using try-catch blocks, finally blocks, and custom exceptions.",
-           "Packages are used to organize related classes, and access modifiers (public, private, protected, default) control visibility.",
-           "The static keyword associates variables or methods with the class, and final prevents modification of variables, methods, or inheritance of classes.",
+            "Arrays are used to store multiple elements of the same data type in contiguous memory locations.",
+            "Strings are immutable objects used to handle text, with operations like concatenation, slicing, and case conversion.",
+            "Exception handling is a mechanism to handle runtime errors using try-catch blocks, finally blocks, and custom exceptions.",
+            "Packages are used to organize related classes, and access modifiers (public, private, protected, default) control visibility.",
+            "The static keyword associates variables or methods with the class, and final prevents modification of variables, methods, or inheritance of classes.",
         ]
     },
     {
-        chapterIndex:4,
-        notes:[
-             "Java Collections Framework provides reusable data structures and algorithms.",
-             "Core Interfaces: List (ordered, allows duplicates), Set (unique elements, unordered), Map (key-value pairs, unique keys).",
-             "Key Classes: ArrayList (dynamic array, fast access), LinkedList (doubly linked list, efficient insert/delete), HashSet (hash table, no duplicates), HashMap (key-value pairs, hash table).",
-             "Iterators are used for traversing collections; Streams (Java 8+) simplify processing with functional programming.",
-             "Use List for indexed access, Set for uniqueness, and Map for key-based lookups.",
-            
+        chapterIndex: 4,
+        notes: [
+            "Java Collections Framework provides reusable data structures and algorithms.",
+            "Core Interfaces: List (ordered, allows duplicates), Set (unique elements, unordered), Map (key-value pairs, unique keys).",
+            "Key Classes: ArrayList (dynamic array, fast access), LinkedList (doubly linked list, efficient insert/delete), HashSet (hash table, no duplicates), HashMap (key-value pairs, hash table).",
+            "Iterators are used for traversing collections; Streams (Java 8+) simplify processing with functional programming.",
+            "Use List for indexed access, Set for uniqueness, and Map for key-based lookups.",
+
         ]
     },
 
-   { 
-    chapterIndex:5,
-    notes:[
+    {
+        chapterIndex: 5,
+        notes: [
 
-        "A thread is the smallest unit of execution in a program.",
-        "The Runnable interface represents a task to be executed by a thread, with the run() method defining the task.",
-        "Threads can be created in two ways",
-        "By extending the Thread class and overriding the run() method",
-        "By implementing the Runnable interface and passing it to a Thread object.",
-        "New: The thread is created but not yet started.",
-        "Runnable: The thread is ready to execute or is currently running.",
-        "Blocked: The thread is waiting for a resource, like a synchronized block.",
-        "Waiting: The thread is waiting indefinitely for another thread to perform a specific action.",
-        "Timed Waiting: The thread is waiting for a specific period, e.g., using Thread.sleep().",
-        "Terminated: The thread has completed its task or has been terminated.",
-        "Synchronization ensures that shared resources are accessed safely by multiple threads, preventing data corruption.",
-        "It can be applied at the method level using the synchronized keyword or at the block level using a synchronized block.",
-        "Without synchronization, multiple threads accessing the same resource can lead to race conditions.",
-        "Use start() to begin a thread's execution.",
-        "join() is used to make the main thread wait for other threads to complete.",
-        "The sleep() method is used to pause a thread for a specific time.",
-        "The Thread class provides methods like getName() and currentThread() to manage thread properties.",   
-    ]
-   },
-   {
-    chapterIndex: 6,
-    notes:[
-        "FileReader and FileWriter are used for reading and writing characters to files, they are basic but not efficient for larger files",
-        "BufferedReader and BufferedWriter are more efficient as they read and write larger chunks of data at a time, improving performance",
-        "Serialization is used to convert objects into a byte stream so that they can be saved or transmitted",
-        "Deserialization is the reverse of serialization, where a byte stream is converted back into the original object",
-        "Serializable Interface: Classes must implement Serializable to enable serialization"
-    ]
-   },
-   {
-    chapterIndex:7,
-    notes:[
-        "Lambda expressions provide a concise way to pass behavior (as an instance of a functional interface) to methods.",
-         "Functional interfaces are interfaces with just one abstract method and are commonly used with lambda expressions.",
-         "Stream API allows you to process sequences of data with methods like filter(), map(), and reduce() in a functional way.",
-         "Default methods in interfaces provide default implementations, reducing the need to override them in implementing classes.",
-         "Static methods in interfaces are called using the interface name and cannot be overridden by implementing classes.",
-    ]
-   },
-   {
-    chapterIndex:8,
-    notes:[
-        "Generics allow you to write more flexible and type-safe code by defining classes, interfaces, and methods with type parameters.",
-        "Annotations are metadata that provide additional information to the compiler or runtime environment, such as @Override, @Deprecated, and @SuppressWarnings.",
-        "Networking in Java involves using the java.net package to create client-server applications, using classes like Socket, ServerSocket, and URL for communication over the network.",
-    ]
-   }
+            "A thread is the smallest unit of execution in a program.",
+            "The Runnable interface represents a task to be executed by a thread, with the run() method defining the task.",
+            "Threads can be created in two ways",
+            "By extending the Thread class and overriding the run() method",
+            "By implementing the Runnable interface and passing it to a Thread object.",
+            "New: The thread is created but not yet started.",
+            "Runnable: The thread is ready to execute or is currently running.",
+            "Blocked: The thread is waiting for a resource, like a synchronized block.",
+            "Waiting: The thread is waiting indefinitely for another thread to perform a specific action.",
+            "Timed Waiting: The thread is waiting for a specific period, e.g., using Thread.sleep().",
+            "Terminated: The thread has completed its task or has been terminated.",
+            "Synchronization ensures that shared resources are accessed safely by multiple threads, preventing data corruption.",
+            "It can be applied at the method level using the synchronized keyword or at the block level using a synchronized block.",
+            "Without synchronization, multiple threads accessing the same resource can lead to race conditions.",
+            "Use start() to begin a thread's execution.",
+            "join() is used to make the main thread wait for other threads to complete.",
+            "The sleep() method is used to pause a thread for a specific time.",
+            "The Thread class provides methods like getName() and currentThread() to manage thread properties.",
+        ]
+    },
+    {
+        chapterIndex: 6,
+        notes: [
+            "FileReader and FileWriter are used for reading and writing characters to files, they are basic but not efficient for larger files",
+            "BufferedReader and BufferedWriter are more efficient as they read and write larger chunks of data at a time, improving performance",
+            "Serialization is used to convert objects into a byte stream so that they can be saved or transmitted",
+            "Deserialization is the reverse of serialization, where a byte stream is converted back into the original object",
+            "Serializable Interface: Classes must implement Serializable to enable serialization"
+        ]
+    },
+    {
+        chapterIndex: 7,
+        notes: [
+            "Lambda expressions provide a concise way to pass behavior (as an instance of a functional interface) to methods.",
+            "Functional interfaces are interfaces with just one abstract method and are commonly used with lambda expressions.",
+            "Stream API allows you to process sequences of data with methods like filter(), map(), and reduce() in a functional way.",
+            "Default methods in interfaces provide default implementations, reducing the need to override them in implementing classes.",
+            "Static methods in interfaces are called using the interface name and cannot be overridden by implementing classes.",
+        ]
+    },
+    {
+        chapterIndex: 8,
+        notes: [
+            "Generics allow you to write more flexible and type-safe code by defining classes, interfaces, and methods with type parameters.",
+            "Annotations are metadata that provide additional information to the compiler or runtime environment, such as @Override, @Deprecated, and @SuppressWarnings.",
+            "Networking in Java involves using the java.net package to create client-server applications, using classes like Socket, ServerSocket, and URL for communication over the network.",
+        ]
+    }
 
-    
+
 ];
 
 const articles = [
     {
         chapterIndex: 0,
         articles: [
-           
+
         ]
     },
     {
         chapterIndex: 1,
         articles: [
-         
+
         ]
     },
     {
         chapterIndex: 2,
         articles: [
-          
+
         ]
     }
 ];

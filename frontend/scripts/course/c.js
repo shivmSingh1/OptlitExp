@@ -1,4 +1,4 @@
-import { handleTabSwitching, renderChapters, setChapterLinkListeners } from "/minorProject/modules/chapterModule.js";
+import { handleTabSwitching, renderChapters, setChapterLinkListeners } from "../../modules/chapterModule";
 
 // Define arrays for each chapter's content type
 const chapters = [

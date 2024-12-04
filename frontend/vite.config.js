@@ -13,6 +13,9 @@ export default defineConfig({
 				signup: path.resolve(__dirname, 'pages/signup.html'),
 				// Course Pages
 				c: path.resolve(__dirname, 'pages/course/c.html'),
+				java: path.resolve(__dirname, 'pages/course/java.html'),
+				networking: path.resolve(__dirname, 'pages/course/networking.html'),
+				os: path.resolve(__dirname, 'pages/course/os.html'),
 				web_development: path.resolve(__dirname, 'pages/course/web_development/web_develoment.html'),
 				html: path.resolve(__dirname, 'pages/course/web_development/html.html'),
 				css: path.resolve(__dirname, 'pages/course/web_development/css.html'),
