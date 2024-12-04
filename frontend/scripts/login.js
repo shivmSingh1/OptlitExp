@@ -2,7 +2,7 @@
 
 import { danger, shToast, success } from "../modules/toast";
 
-
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;;
 const loginForm = document.querySelector("#login-form");
 
 loginForm.addEventListener("submit", async (e) => {
@@ -19,7 +19,7 @@ loginForm.addEventListener("submit", async (e) => {
 
 	try {
 
-		const response = await fetch('http://localhost:3000/login', {
+		const response = await fetch(`${BASE_URL}/login`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

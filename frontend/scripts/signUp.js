@@ -6,6 +6,8 @@ signInBtn.addEventListener("click", () => {
 
 // ------------------------------------------------
 import { danger, shToast, success } from "../modules/toast";
+
+import.meta.env.VITE_API_BASE_URL;
 const form = document.getElementById('signupForm');
 
 
@@ -32,7 +34,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Send data to the server
-        const response = await fetch('http://localhost:3000/signup', {
+        const response = await fetch(`${process.env.API_BASE_URL}/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
