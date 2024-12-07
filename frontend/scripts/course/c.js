@@ -55,15 +55,11 @@ const chapters = [
         code: `#include <stdio.h>\n\nint main() {\n  int arr[5] = {1, 2, 3, 4, 5};\n  for(int i = 0; i < 5; i++) {\n    printf("%d ", arr[i]);\n  }\n  char str[] = "Hello, World!";\n  printf("\\n%s", str);\n  return 0;\n}`
     },
     {
-        title: "chapter 6:geg",
-        content: "erfe",
-        code: "ff"
+        title: "chapter 6:",
+        content: "",
+        code: ""
     },
-    {
-        title: "chapter 7",
-        content: "sdst",
-        code: "asda"
-    }
+
 ];
 
 

@@ -6,14 +6,17 @@ signInBtn.addEventListener("click", () => {
 
 // ------------------------------------------------
 import { danger, shToast, success } from "../modules/toast";
-console.log("gotin signup.js")
+// console.log("gotin signup.js")
 
 import.meta.env.VITE_API_BASE_URL;
 const form = document.getElementById('signupForm');
+const signupBtn = document.querySelector(".sign-up-btn")
 
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    signupBtn.disabled = true;
+    signupBtn.style.opacity = 0.5;
 
     // Client-side validation
     const username = document.getElementById('username').value.trim();
@@ -25,11 +28,11 @@ form.addEventListener('submit', async (e) => {
         return;
     }
     if (!email.match(/^\S+@\S+\.\S+$/)) {
-        alert('Please enter a valid email.');
+        shToast('Please enter a valid email.', danger);
         return;
     }
     if (password.length < 6) {
-        alert('Password must be at least 6 characters long.');
+        shToast('Password must be at least 6 characters long.', danger);
         return;
     }
 
@@ -45,6 +48,11 @@ form.addEventListener('submit', async (e) => {
 
         const result = await response.text();
 
+        if (response) {
+            signupBtn.disabled = false;
+            signupBtn.style.opacity = 1;
+        }
+
         if (response.ok) {
             shToast('Signup successful! You can now login.', success, "black");
             form.reset(); // Clear form fields
@@ -52,7 +60,9 @@ form.addEventListener('submit', async (e) => {
             alert(result); // Display server error
         }
     } catch (error) {
-        alert('An error occurred. Please try again later.');
+        shToast('An error occurred. Please try again later.', danger);
         console.error(error);
+        signupBtn.disabled = false;
+        signupBtn.style.opacity = 1;
     }
 });
